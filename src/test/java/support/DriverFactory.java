@@ -17,7 +17,7 @@ public class DriverFactory {
 
     public void initializeWebDriver() {
         if (browser == null) {
-            browser = "chrome-headless";
+            browser = "chrome";
         }
 
         switch (browser) {
