@@ -1,0 +1,10 @@
+## Login ##
+Login com sucesso
+Com username inválido
+Com senha inválida
+Com username e senha em branco
+
+## ToCart ##
+Comprar um produto
+Adicionar produto no carrinho depois removê-lo
+Adicionar um produto no carrinho e continuar comprando
