@@ -5,12 +5,6 @@ public class GetIOS {
     private static String userDir = System.getProperty("user.dir");
     private static String pathSystem;
 
-    /*
-     *  Metodo para verificar o systema operacional
-     *  onde o teste será executado, e desta maneira
-     *  passar o caminho correto do driver.
-     */
-
     public static String getPathDriver() {
         if (osName.contains("win")) {
             System.out.println("Operating System: Windows");
@@ -18,7 +12,7 @@ public class GetIOS {
 
         } else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
             System.out.println("Operating System: Unix/Linux");
-            pathSystem = userDir + "/usr/local/bin/chromedriver";
+            pathSystem = userDir + "/drivers/linux/chromedriver";
 
         } else if (osName.contains("mac")) {
             System.out.println("Operating System: macOS");
@@ -27,7 +21,6 @@ public class GetIOS {
         } else {
             System.out.println("Sistema Operacional não reconhecido");
         }
-
         return pathSystem;
     }
 }
