@@ -25,7 +25,10 @@ jobs:
   
     - name: Install chrome driver
       run: |
-        wget https://chromedriver.storage.googleapis.com/versao.desejada/chromedriver_linux64.zip
+        sudo apt update
+        sudo apt install curl
+        
+        curl https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/linux64/chromedriver-linux64.zip
         unzip chromedriver_linux64.zip
         sudo mv chromedriver /usr/local/bin/chromedriver
         sudo chown root /usr/local/bin/chromedriver
