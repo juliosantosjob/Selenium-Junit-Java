@@ -22,6 +22,17 @@ jobs:
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
 
+    - name: Install driver
+      run: |
+        sudo apt-get install unzip
+        wget -N https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/linux64/chromedriver-linux64.zip -P ~/Downloads
+        unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
+        chmod +x ~/Downloads/chromedriver
+        sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
+        Change the directory to /usr/bin/chromedriver
+        sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+        sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+
     - name: Build with Maven
       run: mvn install -DskipTests
 
