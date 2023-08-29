@@ -28,20 +28,27 @@ jobs:
     - name: Running test with chrome
       run: mvn test -DBROWSER=chrome-headless
 
-    - name: Get Allure history
+    - name: Get Allure History
       uses: actions/checkout@v2
       if: always()
       continue-on-error: true
       with:
         ref: gh-pages
-        path: gh-pages
+        path: gh-page
 
-    - name: Test local action
-      uses: ./allure-report-action
+    - name: Action From Marketplace
+      uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
       with:
         allure_results: ./allure-results
         gh_pages: gh-pages
         allure_report: allure-report
-        allure_history: allure-history    
+        allure_history: allure-histor 
+    - name: Deploy report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: allure-history
