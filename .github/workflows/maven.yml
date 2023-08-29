@@ -25,7 +25,8 @@ jobs:
         browser: chrome
         version: latest
         
-    -  run: | 
+    - name: chrome version   
+      run: | 
           google-chrome --version
   
     - name: Build with Maven
