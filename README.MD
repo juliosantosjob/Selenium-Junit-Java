@@ -1,6 +1,6 @@
-# Como Executar o Projeto Selenium-Junit
+# Como Executar o Projeto Selenium-Java-Junit
 
-Este README fornece instruções sobre como configurar e executar o projeto "Selenium-Junit". O projeto é um exemplo de teste automatizado usando o framework Selenium com JUnit.
+Este README fornece instruções sobre como configurar e executar o projeto "Selenium-Java-Junit". O projeto é um exemplo de teste automatizado usando o framework Selenium com JUnit.
 
 ## Pré-requisitos
 
@@ -16,7 +16,7 @@ Este README fornece instruções sobre como configurar e executar o projeto "Sel
 Abra o terminal e navegue até o diretório onde deseja colocar o projeto. Execute o seguinte comando para clonar o repositório:
 
 ```sh
-git clone https://github.com/juliosantosjob/Selenium-Junit.git
+git clone https://github.com/juliosantosjob/Selenium-Java-Junit.git
 ```
 
 2. Configurar o WebDriver
