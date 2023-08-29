@@ -24,6 +24,9 @@ jobs:
       with:
         browser: chrome
         version: latest
+        
+    -  run: | 
+          google-chrome --version
   
     - name: Build with Maven
       run: mvn install -DskipTests
