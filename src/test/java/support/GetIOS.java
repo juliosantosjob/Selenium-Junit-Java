@@ -12,7 +12,7 @@ public class GetIOS {
 
         } else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
             System.out.println("Operating System: Unix/Linux");
-            pathSystem = userDir + "/drivers/linux/chromedriver";
+            pathSystem = userDir + "/usr/bin/chromedriver";
 
         } else if (osName.contains("mac")) {
             System.out.println("Operating System: macOS");
