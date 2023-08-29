@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddToCartPages {
+public class PurchasesPages {
 
 	@FindBy(css = ".inventory_details_desc_container")
 	protected WebElement cardItem;

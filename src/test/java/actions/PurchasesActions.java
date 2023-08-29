@@ -11,11 +11,11 @@ import static utils.Assertions.contains;
 import static utils.Commands.click;
 import static utils.Commands.clickText;
 
-import pages.AddToCartPages;
+import pages.PurchasesPages;
 
-public class AddToCartActions extends AddToCartPages {
+public class PurchasesActions extends PurchasesPages {
 
-    public AddToCartActions(WebDriver driver) {
+    public PurchasesActions(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

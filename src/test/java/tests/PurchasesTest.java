@@ -5,18 +5,18 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import actions.AddToCartActions;
+import actions.PurchasesActions;
 import actions.LoginActions;
 import support.Hooks;
 
 @Tag("regression")
-public class AddToCartTest extends Hooks {
-    private static AddToCartActions addToCart;
+public class PurchasesTest extends Hooks {
+    private static PurchasesActions addToCart;
     private static LoginActions login;
 
     @BeforeEach
     public void hook() {
-        addToCart = new AddToCartActions(driver);
+        addToCart = new PurchasesActions(driver);
         login = new LoginActions(driver);
 
         /* Adicionando um passo de login para cada teste */
