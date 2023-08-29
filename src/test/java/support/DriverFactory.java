@@ -36,7 +36,12 @@ public class DriverFactory {
                 break;
 
             case "chrome-headless":
-                System.setProperty("webdriver.chrome.driver", getPathDriver());
+                try {
+                    System.setProperty("webdriver.chrome.driver", getPathDriver());
+                } catch (Exception e) {
+                    System.out.println("Não foi possivel encontrar o caminho para: " + getPathDriver());
+                }
+
                 ChromeOptions headlessChromeOptions = new ChromeOptions();
                 headlessChromeOptions.addArguments("--headless");
                 headlessChromeOptions.addArguments("--remote-allow-origins=*");
