@@ -20,10 +20,10 @@ jobs:
         server-id: github 
         settings-path: ${{ github.workspace }} 
         
-    - name: Install Google Chrome
-      run: |
-         chmod +x ./scripts/InstallChrome.sh
-            ./scripts/InstallChrome.sh
+    - uses: abhi1693/setup-browser@v0.3.4
+      with:
+        browser: chrome
+        version: latest
 
     - name: Build with Maven
       run: mvn install -DskipTests
