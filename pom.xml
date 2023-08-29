@@ -25,6 +25,7 @@
         <mvnSurefire.version>2.19.1</mvnSurefire.version>
         <commonsIo.version>2.13.0</commonsIo.version>
         <mavenSurefire.version>2.22.2</mavenSurefire.version>
+        <webdrivermanager.version>5.5.2</webdrivermanager.version>
     </properties>
 
     <dependencies>
@@ -73,14 +74,11 @@
             <artifactId>commons-io</artifactId>
             <version>${commonsIo.version}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.5.2</version>
+            <version>${webdrivermanager.version}</version>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
