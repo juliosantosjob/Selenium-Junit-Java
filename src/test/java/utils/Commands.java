@@ -58,7 +58,6 @@ public class Commands extends Hooks {
     } catch (Exception e) {
       System.out.println("Unable to wait for element!");
     }
-
     return webElement;
   }
 
@@ -67,9 +66,10 @@ public class Commands extends Hooks {
    * Ex: realClick(elemento);
    */
 
-  public static void realClick(WebElement webElement) {
+  public static WebElement realClick(WebElement webElement) {
     JavascriptExecutor executor = (JavascriptExecutor) driver;
     executor.executeScript("arguments[0].click();", webElement);
+    return webElement;
   }
 
   /*
@@ -83,7 +83,6 @@ public class Commands extends Hooks {
     } catch (Exception e) {
       System.out.println(e.getCause());
     }
-
     return webElement;
   }
 }

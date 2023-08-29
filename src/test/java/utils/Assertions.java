@@ -57,7 +57,6 @@ public class Assertions extends Hooks {
         } else {
             System.out.print("Text \"" + text + "\" is displayed");
         }
-
         return waitElement;
     }
 }
