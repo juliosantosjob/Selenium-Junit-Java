@@ -11,12 +11,12 @@ import support.Hooks;
 
 @Tag("regression")
 public class PurchasesTest extends Hooks {
-    private static PurchasesActions addToCart;
+    private static PurchasesActions toCart;
     private static LoginActions login;
 
     @BeforeEach
     public void hook() {
-        addToCart = new PurchasesActions(driver);
+        toCart = new PurchasesActions(driver);
         login = new LoginActions(driver);
 
         /* Adicionando um passo de login para cada teste */
@@ -27,19 +27,20 @@ public class PurchasesTest extends Hooks {
     @Test
     @Tag("addProduct")
     @DisplayName("Adding product to cart")
-    public void addingAProductToTheCart() {
-        addToCart.selectItem("Sauce Labs Bike Light");
-        addToCart.accessCart();
-        addToCart.displaysProductInCart("Sauce Labs Bike Light");
+    public void adding_product_to_the_cart() {
+        toCart.selectItem("Sauce Labs Bike Light");
+        toCart.accessCart();
+        toCart.displaysProductInCart("Sauce Labs Bike Light");
     }
 
     @Test
-    @Tag("removeProduct")
+    @Tag("rmvProduct")
     @DisplayName("Remove product to cart")
-    public void removeAProductToTheCart() {
-        addToCart.selectItem("Sauce Labs Bike Light");
-        addToCart.accessCart();
-        addToCart.displaysProductInCart("Sauce Labs Bike Light");
-        addToCart.removeItem("Sauce Labs Bike Light");
+    public void remove_product_to_cart() {
+        toCart.selectItem("Sauce Labs Bike Light");
+        toCart.accessCart();
+        toCart.displaysProductInCart("Sauce Labs Bike Light");
+        toCart.removeItem("Sauce Labs Bike Light");
     }
+    
 }
