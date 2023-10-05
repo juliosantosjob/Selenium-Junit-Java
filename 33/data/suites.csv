@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Oct 05 02:08:49 GMT 2023","Thu Oct 05 02:08:51 GMT 2023","1450","","tests.LoginTest","","tests.LoginTest","loginSuccessfully","Login success",""
+"passed","Thu Oct 05 02:08:51 GMT 2023","Thu Oct 05 02:08:52 GMT 2023","1374","","tests.LoginTest","","tests.LoginTest","withoutUsernameAndPassword","Login with wrong password end username",""
+"passed","Thu Oct 05 02:08:41 GMT 2023","Thu Oct 05 02:08:48 GMT 2023","6991","","tests.PurchasesTest","","tests.PurchasesTest","remove_product_to_cart","Remove product to cart",""
+"passed","Thu Oct 05 02:08:48 GMT 2023","Thu Oct 05 02:08:49 GMT 2023","1336","","tests.LoginTest","","tests.LoginTest","wrongPassword","Login with wrong password",""
+"passed","Thu Oct 05 02:08:25 GMT 2023","Thu Oct 05 02:08:41 GMT 2023","16105","","tests.PurchasesTest","","tests.PurchasesTest","adding_product_to_the_cart","Adding product to cart",""
+"passed","Thu Oct 05 02:08:52 GMT 2023","Thu Oct 05 02:08:53 GMT 2023","1224","","tests.LoginTest","","tests.LoginTest","wrongUsername","Login with wrong username",""
