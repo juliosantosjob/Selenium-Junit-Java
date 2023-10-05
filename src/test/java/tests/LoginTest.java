@@ -20,7 +20,7 @@ public class LoginTest extends Hooks {
 
     @Test
     @Tag("login")
-    @DisplayName("Login success")
+    @DisplayName("Login successfully")
     public void login_successfully() {
         login.fillCredentials("standard_user", "secret_sauce");
         login.beLogged();
