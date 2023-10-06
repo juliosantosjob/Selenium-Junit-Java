@@ -19,7 +19,7 @@ public class PurchasesTest extends Hooks {
         toCart = new PurchasesActions(driver);
         login = new LoginActions(driver);
 
-        /* Adicionando um passo de login para cada teste */
+        /* Ação de login para realizar os proximos cenarios */
         login.go();
         login.fillCredentials("standard_user", "secret_sauce");
     }
@@ -27,7 +27,7 @@ public class PurchasesTest extends Hooks {
     @Test
     @Tag("addProduct")
     @DisplayName("Adding product to cart")
-    public void adding_product_to_the_cart() {
+    public void addingProductToTheCart() {
         toCart.selectItem("Sauce Labs Bike Light");
         toCart.accessCart();
         toCart.displaysProductInCart("Sauce Labs Bike Light");
@@ -36,7 +36,7 @@ public class PurchasesTest extends Hooks {
     @Test
     @Tag("rmvProduct")
     @DisplayName("Remove product to cart")
-    public void remove_product_to_cart() {
+    public void removeProductToCart() {
         toCart.selectItem("Sauce Labs Bike Light");
         toCart.accessCart();
         toCart.displaysProductInCart("Sauce Labs Bike Light");

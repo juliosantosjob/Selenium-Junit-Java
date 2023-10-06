@@ -21,7 +21,7 @@ public class LoginTest extends Hooks {
     @Test
     @Tag("login")
     @DisplayName("Login successfully")
-    public void login_successfully() {
+    public void loginSuccessfully() {
         login.fillCredentials("standard_user", "secret_sauce");
         login.beLogged();
     }
@@ -29,7 +29,7 @@ public class LoginTest extends Hooks {
     @Test
     @Tag("usernameError")
     @DisplayName("Login with wrong username")
-    public void login_with_wrong_username() {
+    public void loginWithWrongUsername() {
         login.fillCredentials("un_error", "secret_sauce");
         login.displaysTheError("Epic sadface: Username and password do not match any user in this service");
     }
@@ -37,7 +37,7 @@ public class LoginTest extends Hooks {
     @Test
     @Tag("passwdError")
     @DisplayName("Login with wrong password")
-    public void login_with_wrong_password() {
+    public void loginWithWrongPassword() {
         login.fillCredentials("standard_user", "un_error");
         login.displaysTheError("Epic sadface: Username and password do not match any user in this service");
     }
@@ -45,7 +45,7 @@ public class LoginTest extends Hooks {
     @Test
     @Tag("bothError")
     @DisplayName("Login with wrong password and username")
-    public void login_with_wrong_password_and_username() {
+    public void loginWithWrongPasswordAndUsername() {
         login.fillCredentials("", "");
         login.displaysTheError("Epic sadface: Username is required");
     }
