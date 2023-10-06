@@ -1,4 +1,4 @@
-package utils;
+package com.saucedemo.utils;
 
 import java.time.Duration;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import support.Hooks;
+import com.saucedemo.support.Hooks;
 
 public class Commands extends Hooks {
   private static WebDriverWait wait;

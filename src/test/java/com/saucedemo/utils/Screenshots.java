@@ -1,4 +1,4 @@
-package utils;
+package com.saucedemo.utils;
 
 import java.io.File;
 
@@ -7,7 +7,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import io.qameta.allure.Allure;
-import support.Hooks;
+import com.saucedemo.support.Hooks;
+
+import static java.lang.Thread.sleep;
 
 public class Screenshots extends Hooks {
 
@@ -15,8 +17,9 @@ public class Screenshots extends Hooks {
    * Metodo para tirar screenshots para evidenciar os testes.
    */
 
-  public static void makingScreenshots() throws Exception {
+  public static void makingScreenshots() {
     try {
+      sleep(2000);
       File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
       Allure.addAttachment("Screenshot", FileUtils.openInputStream(screenshotAs));
     } catch (Exception e) {

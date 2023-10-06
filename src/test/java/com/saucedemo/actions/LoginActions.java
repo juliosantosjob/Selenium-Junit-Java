@@ -1,13 +1,13 @@
-package actions;
+package com.saucedemo.actions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import static utils.Assertions.assertion;
-import static utils.Assertions.isVisible;
-import static utils.Commands.fill;
-import static utils.Commands.click;
+import static com.saucedemo.utils.Assertions.assertion;
+import static com.saucedemo.utils.Assertions.isVisible;
+import static com.saucedemo.utils.Commands.fill;
+import static com.saucedemo.utils.Commands.click;
 
-import pages.LoginPages;
+import com.saucedemo.pages.LoginPages;
 
 public class LoginActions extends LoginPages {
 

@@ -1,4 +1,4 @@
-package support;
+package com.saucedemo.support;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

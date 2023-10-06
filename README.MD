@@ -1,4 +1,4 @@
-# Como Executar o Projeto Selenium-Junit-Java
+# Execução do Projeto
 
 Este README fornece instruções sobre como configurar e executar o projeto "Selenium-Junit-Java". O projeto é um exemplo de teste automatizado usando o framework Selenium com JUnit.
 
@@ -26,7 +26,7 @@ git clone https://github.com/juliosantosjob/Selenium-Java-Junit.git
    O Maven automaticamente baixará as dependências necessárias com base no arquivo pom.xml. Certifique-se de que seu IDE esteja configurado para usar o Maven.
 
 3. Executar os Testes
-   Navegue até o diretório src/test/java/runners/TestRunner.java. E Abra a classe e execute os testes clicando no botão de execução do JUnit na IDE ou utilizando comandos do Maven, como:
+   Navegue até o diretório src/test/java/com.saucedemo.runners/TestRunner.java. E Abra a classe e execute os testes clicando no botão de execução do JUnit na IDE ou utilizando comandos do Maven, como:
 
 ```sh
 mvn clean test

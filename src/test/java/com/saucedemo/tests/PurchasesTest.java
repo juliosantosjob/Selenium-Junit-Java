@@ -1,13 +1,13 @@
-package tests;
+package com.saucedemo.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import actions.PurchasesActions;
-import actions.LoginActions;
-import support.Hooks;
+import com.saucedemo.actions.PurchasesActions;
+import com.saucedemo.actions.LoginActions;
+import com.saucedemo.support.Hooks;
 
 @Tag("regression")
 public class PurchasesTest extends Hooks {

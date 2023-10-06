@@ -1,4 +1,4 @@
-package support;
+package com.saucedemo.support;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

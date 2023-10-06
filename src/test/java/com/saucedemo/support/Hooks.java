@@ -1,4 +1,4 @@
-package support;
+package com.saucedemo.support;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,8 +7,8 @@ import org.junit.jupiter.api.TestInfo;
 import java.time.Duration;
 
 import static java.lang.System.out;
-import static support.PropertiesSupport.propLoad;
-import static utils.Screenshots.makingScreenshots;
+import static com.saucedemo.support.PropertiesSupport.propLoad;
+import static com.saucedemo.utils.Screenshots.makingScreenshots;
 
 public class Hooks extends DriverFactory {
 
@@ -28,7 +28,7 @@ public class Hooks extends DriverFactory {
     }
 
     @AfterEach
-    public void afterTests() throws Exception {
+    public void afterTests() {
         out.println(" ");
         out.println("Finishing Test Execution...");
         out.println(" ");

@@ -1,15 +1,15 @@
-package runners;
+package com.saucedemo.runners;
 
 import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
-import tests.PurchasesTest;
-import tests.LoginTest;
+import com.saucedemo.tests.PurchasesTest;
+import com.saucedemo.tests.LoginTest;
 
 @Suite
 @SelectClasses({ PurchasesTest.class, LoginTest.class })
-@SelectPackages("src/test/java/tests")
+@SelectPackages("src/test/java/com.saucedemo.tests")
 @IncludeTags("regression")
 public class RunningTests {}
