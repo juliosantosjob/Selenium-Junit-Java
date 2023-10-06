@@ -1,13 +1,13 @@
-# Como Executar o Projeto Selenium-Java-Junit
+# Como Executar o Projeto Selenium-Junit-Java
 
-Este README fornece instruções sobre como configurar e executar o projeto "Selenium-Java-Junit". O projeto é um exemplo de teste automatizado usando o framework Selenium com JUnit.
+Este README fornece instruções sobre como configurar e executar o projeto "Selenium-Junit-Java". O projeto é um exemplo de teste automatizado usando o framework Selenium com JUnit.
 
 ## Pré-requisitos
 
 - Java JDK (versão recomendada: 8 ou superior)
 - Maven (para gerenciamento de dependências)
-- WebDriver (por exemplo, ChromeDriver, GeckoDriver) para seu navegador preferido
-- Git (opcional, mas recomendado, para clonar o repositório)
+- WebDriver (por exemplo, ChromeDriver, GeckoDriver)
+- Git (para clonar o repositório)
 
 ## Passos para Execução
 
@@ -29,11 +29,15 @@ git clone https://github.com/juliosantosjob/Selenium-Java-Junit.git
    Navegue até o diretório src/test/java/runners/TestRunner.java. E Abra a classe e execute os testes clicando no botão de execução do JUnit na IDE ou utilizando comandos do Maven, como:
 
 ```sh
-mvn test
+mvn clean test
 ```
 
 4. Análise dos Resultados
-   Após a execução dos testes, você poderá ver os resultados na pasta de saida allure results. para abrir basta instalar o allure report em sua maquina.
+   Após a execução dos testes, você poderá ver os resultados na pasta de saida allure results. para abrir basta instalar o allure report em sua maquina e depois de rodar os testes executar o comando:
+
+```sh
+allure serve
+```
 
 ## Networks
 ###
