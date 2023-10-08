@@ -1,4 +1,4 @@
-package com.saucedemo.utils;
+package saucedemo.automation.e2e.utils;
 
 import java.io.File;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import io.qameta.allure.Allure;
-import com.saucedemo.support.Hooks;
+import saucedemo.automation.e2e.support.Hooks;
 
 import static java.lang.Thread.sleep;
 

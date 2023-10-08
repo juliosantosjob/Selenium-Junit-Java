@@ -1,12 +1,12 @@
-package com.saucedemo.tests;
+package saucedemo.automation.e2e.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import com.saucedemo.actions.LoginActions;
-import com.saucedemo.support.Hooks;
+import saucedemo.automation.e2e.actions.LoginActions;
+import saucedemo.automation.e2e.support.Hooks;
 
 @Tag("regression")
 public class LoginTest extends Hooks {

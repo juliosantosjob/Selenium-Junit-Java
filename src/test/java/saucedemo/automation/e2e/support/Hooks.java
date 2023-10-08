@@ -1,4 +1,4 @@
-package com.saucedemo.support;
+package saucedemo.automation.e2e.support;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,8 +7,7 @@ import org.junit.jupiter.api.TestInfo;
 import java.time.Duration;
 
 import static java.lang.System.out;
-import static com.saucedemo.support.PropertiesSupport.propLoad;
-import static com.saucedemo.utils.Screenshots.makingScreenshots;
+import static saucedemo.automation.e2e.utils.Screenshots.makingScreenshots;
 
 public class Hooks extends DriverFactory {
 
@@ -24,7 +23,7 @@ public class Hooks extends DriverFactory {
         initializeWebDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get(propLoad("URL_BASE"));
+        driver.get(PropertiesSupport.propLoad("URL_BASE"));
     }
 
     @AfterEach

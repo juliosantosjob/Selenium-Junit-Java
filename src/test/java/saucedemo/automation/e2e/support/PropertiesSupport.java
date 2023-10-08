@@ -1,4 +1,4 @@
-package com.saucedemo.support;
+package saucedemo.automation.e2e.support;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

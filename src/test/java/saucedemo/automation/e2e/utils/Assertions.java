@@ -1,4 +1,4 @@
-package com.saucedemo.utils;
+package saucedemo.automation.e2e.utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.saucedemo.support.Hooks;
+import saucedemo.automation.e2e.support.Hooks;
 
 public class Assertions extends Hooks {
     private static Boolean waitElement;

@@ -1,4 +1,4 @@
-package com.saucedemo.utils;
+package saucedemo.automation.e2e.utils;
 
 import java.time.Duration;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.saucedemo.support.Hooks;
+import saucedemo.automation.e2e.support.Hooks;
 
 public class Commands extends Hooks {
   private static WebDriverWait wait;
