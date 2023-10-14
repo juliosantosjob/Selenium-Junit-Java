@@ -4,33 +4,40 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import saucedemo.automation.e2e.pages.PurchasesPages;
-import saucedemo.automation.e2e.utils.Assertions;
-import saucedemo.automation.e2e.utils.Commands;
+
+import static saucedemo.automation.e2e.utils.Assertions.*;
+import static saucedemo.automation.e2e.utils.Commands.*;
 
 public class PurchasesActions extends PurchasesPages {
+    private final WebDriver driver;
 
     public PurchasesActions(WebDriver driver) {
         PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
-    public void selectItem(String nameProduct) {
-        Commands.clickText(nameProduct);
-        Assertions.contains(cardItem, nameProduct);
-        Commands.clickText("Add to cart");
+    public PurchasesActions selectItem(String nameProduct) {
+        clickText(nameProduct);
+        contains(cardItem, nameProduct);
+        clickText("Add to cart");
+
+        return new PurchasesActions(driver);
     }
 
-    public void accessCart() {
-        Commands.click(btnCart);
-        Assertions.assertion(titleYourCart, "Your Cart");
+    public PurchasesActions accessCart() {
+        click(btnCart);
+        assertion(titleYourCart, "Your Cart");
+
+        return new PurchasesActions(driver);
     }
 
-    public void displaysProductInCart(String nameProduct) {
-        Assertions.isVisible(fieldProduct);
-        Assertions.assertion(fieldProduct, nameProduct);
+    public String getNameProductInCart() {
+        isVisible(fieldProduct);
+
+        return fieldProduct.getText();
     }
 
-    public void removeItem(String nameProduct) {
-        Commands.clickText("Remove");
-        Assertions.textNotDisplayed(nameProduct);
+    public void removeItem() {
+        clickText("Remove");
     }
 }

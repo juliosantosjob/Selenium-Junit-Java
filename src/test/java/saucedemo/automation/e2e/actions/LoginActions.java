@@ -4,30 +4,42 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import saucedemo.automation.e2e.pages.LoginPages;
-import saucedemo.automation.e2e.utils.Assertions;
-import saucedemo.automation.e2e.utils.Commands;
+
+import static saucedemo.automation.e2e.utils.Assertions.*;
+import static saucedemo.automation.e2e.utils.Commands.*;
 
 public class LoginActions extends LoginPages {
+	private final WebDriver driver;
 
 	public LoginActions(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
 
-	public void go() {
-		Assertions.isVisible(imgHomeSite);
+	public LoginActions go() {
+		isVisible(imgHomeSite);
+
+		return new LoginActions(driver);
 	}
 
-	public void fillCredentials(String userName, String password) {
-		Commands.fill(iptUsrName, userName);
-		Commands.fill(iptPassword, password);
-		Commands.click(btnSubmit);
+	public LoginActions fillCredentials(String userName, String password) {
+		fill(iptUsrName, userName);
+		fill(iptPassword, password);
+		click(btnSubmit);
+
+		return new LoginActions(driver);
 	}
 
-	public void beLogged() {
-		Assertions.assertion(loggedTitle, "Products");
+	public LoginActions beLogged() {
+		isVisible(loggedTitle);
+		assertion(loggedTitle, "Products");
+
+		return new LoginActions(driver);
 	}
 
-	public void displaysTheError(String msg) {
-		Assertions.assertion(msgError, msg);
+	public String getError() {
+		isVisible(msgError);
+
+		return msgError.getText();
 	}
 }

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.TestInfo;
 import java.time.Duration;
 
 import static java.lang.System.out;
-import static saucedemo.automation.e2e.utils.Screenshots.makingScreenshots;
+import static saucedemo.automation.e2e.utils.Screenshots.*;
 
 public class Hooks extends DriverFactory {
 

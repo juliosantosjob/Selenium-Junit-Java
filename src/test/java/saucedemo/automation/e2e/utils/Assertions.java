@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,13 +18,22 @@ public class Assertions extends Hooks {
     private static WebDriverWait wait;
 
     /*
-     * Comando para fazer asserções com elementos e texts
+     * Comando para fazer asserções com elementos e textos
      * Ex: assertion(elemento, "meu texto");
      */
 
     public static void assertion(WebElement webElement, String text) {
         assertEquals(webElement.getText(), text);
     }
+
+    /*
+     * Comando para fazer asserções com textos e textos
+     * Ex: assertText(elemento, "meu texto");
+     */
+
+    public static void assertText(String text, String textTwo) {
+        Assert.assertEquals(text, textTwo);
+    };
 
     /*
      * Comando para fazer asserções para elementos que contenham algum texto

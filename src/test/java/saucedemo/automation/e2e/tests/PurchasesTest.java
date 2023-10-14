@@ -9,38 +9,44 @@ import saucedemo.automation.e2e.actions.PurchasesActions;
 import saucedemo.automation.e2e.actions.LoginActions;
 import saucedemo.automation.e2e.support.Hooks;
 
+import static saucedemo.automation.e2e.utils.Assertions.assertText;
+import static saucedemo.automation.e2e.utils.Assertions.textNotDisplayed;
+
 @Tag("regression")
 public class PurchasesTest extends Hooks {
-    private static PurchasesActions toCart;
-    private static LoginActions login;
+    private final String product = "Sauce Labs Bike Light";
 
     @BeforeEach
-    public void hook() {
-        toCart = new PurchasesActions(driver);
-        login = new LoginActions(driver);
-
+    public void hookBefore() {
         /* Ação de login para realizar os proximos cenarios */
-        login.go();
-        login.fillCredentials("standard_user", "secret_sauce");
+        new LoginActions(driver)
+                .go()
+                .fillCredentials("standard_user", "secret_sauce")
+                .beLogged();
     }
 
     @Test
     @Tag("addProduct")
     @DisplayName("Adding product to cart")
     public void addingProductToTheCart() {
-        toCart.selectItem("Sauce Labs Bike Light");
-        toCart.accessCart();
-        toCart.displaysProductInCart("Sauce Labs Bike Light");
+        String name = new PurchasesActions(driver)
+                .selectItem(product)
+                .accessCart()
+                .getNameProductInCart();
+
+        assertText(name, product);
     }
 
     @Test
     @Tag("rmvProduct")
     @DisplayName("Remove product to cart")
     public void removeProductToCart() {
-        toCart.selectItem("Sauce Labs Bike Light");
-        toCart.accessCart();
-        toCart.displaysProductInCart("Sauce Labs Bike Light");
-        toCart.removeItem("Sauce Labs Bike Light");
+        new PurchasesActions(driver)
+                .selectItem(product)
+                .accessCart()
+                .removeItem();
+
+        textNotDisplayed(product);
     }
-    
+
 }
