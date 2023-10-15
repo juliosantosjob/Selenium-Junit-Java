@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Oct 15 03:17:44 GMT 2023","Sun Oct 15 03:17:53 GMT 2023","9399","","saucedemo.automation.e2e.tests.PurchasesTest","","saucedemo.automation.e2e.tests.PurchasesTest","removeProductToCart","Remove product to cart",""
+"passed","Sun Oct 15 03:17:53 GMT 2023","Sun Oct 15 03:17:57 GMT 2023","3810","","saucedemo.automation.e2e.tests.LoginTest","","saucedemo.automation.e2e.tests.LoginTest","loginWithWrongPassword","Login with wrong password",""
+"passed","Sun Oct 15 03:18:05 GMT 2023","Sun Oct 15 03:18:08 GMT 2023","3586","","saucedemo.automation.e2e.tests.LoginTest","","saucedemo.automation.e2e.tests.LoginTest","loginWithWrongUsername","Login with wrong username",""
+"passed","Sun Oct 15 03:17:57 GMT 2023","Sun Oct 15 03:18:01 GMT 2023","3593","","saucedemo.automation.e2e.tests.LoginTest","","saucedemo.automation.e2e.tests.LoginTest","loginWithWrongPasswordAndUsername","Login with wrong password and username",""
+"passed","Sun Oct 15 03:17:27 GMT 2023","Sun Oct 15 03:17:44 GMT 2023","17000","","saucedemo.automation.e2e.tests.PurchasesTest","","saucedemo.automation.e2e.tests.PurchasesTest","addingProductToTheCart","Adding product to cart",""
+"passed","Sun Oct 15 03:18:01 GMT 2023","Sun Oct 15 03:18:05 GMT 2023","3775","","saucedemo.automation.e2e.tests.LoginTest","","saucedemo.automation.e2e.tests.LoginTest","loginSuccessfully","Login successfully",""
