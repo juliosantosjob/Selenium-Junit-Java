@@ -11,7 +11,7 @@ import static saucedemo.automation.e2e.utils.Assertions.assertText;
 public class LoginTest extends Hooks {
 
     @BeforeEach
-    public void hook() {
+    public void hookBefore() {
         new LoginActions(driver)
                 .go();
     }
