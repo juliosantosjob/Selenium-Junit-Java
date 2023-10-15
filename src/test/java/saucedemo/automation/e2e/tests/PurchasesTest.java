@@ -26,7 +26,7 @@ public class PurchasesTest extends Hooks {
     }
 
     @Test
-    @Tag("addProduct")
+    @Tag("add_product")
     @DisplayName("Adding product to cart")
     public void addingProductToTheCart() {
         String name = new PurchasesActions(driver)
@@ -38,7 +38,7 @@ public class PurchasesTest extends Hooks {
     }
 
     @Test
-    @Tag("rmvProduct")
+    @Tag("rmv_product")
     @DisplayName("Remove product to cart")
     public void removeProductToCart() {
         new PurchasesActions(driver)
