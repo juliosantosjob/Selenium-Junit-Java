@@ -26,7 +26,7 @@ public class LoginTest extends Hooks {
     }
 
     @Test
-    @Tag("usernameError")
+    @Tag("username_error")
     @DisplayName("Login with wrong username")
     public void loginWithWrongUsername() {
         String error = new LoginActions(driver)
@@ -37,7 +37,7 @@ public class LoginTest extends Hooks {
     }
 
     @Test
-    @Tag("passwdError")
+    @Tag("passwd_error")
     @DisplayName("Login with wrong password")
     public void loginWithWrongPassword() {
         String error = new LoginActions(driver)
@@ -48,7 +48,7 @@ public class LoginTest extends Hooks {
     }
 
     @Test
-    @Tag("bothError")
+    @Tag("both_error")
     @DisplayName("Login with wrong password and username")
     public void loginWithWrongPasswordAndUsername() {
         String error = new LoginActions(driver)
