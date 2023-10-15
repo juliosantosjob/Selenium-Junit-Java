@@ -16,7 +16,7 @@ public class PurchasesActions extends PurchasesPages {
         this.driver = driver;
     }
 
-    public PurchasesActions selectItem(String nameProduct) {
+    public PurchasesActions addToCart(String nameProduct) {
         clickText(nameProduct);
         contains(cardItem, nameProduct);
         clickText("Add to cart");
