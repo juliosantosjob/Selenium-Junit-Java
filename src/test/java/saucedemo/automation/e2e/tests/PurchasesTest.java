@@ -30,7 +30,7 @@ public class PurchasesTest extends Hooks {
     @DisplayName("Adding product to cart")
     public void addingProductToTheCart() {
         String name = new PurchasesActions(driver)
-                .selectItem(product)
+                .addToCart(product)
                 .accessCart()
                 .getNameProductInCart();
 
@@ -42,7 +42,7 @@ public class PurchasesTest extends Hooks {
     @DisplayName("Remove product to cart")
     public void removeProductToCart() {
         new PurchasesActions(driver)
-                .selectItem(product)
+                .addToCart(product)
                 .accessCart()
                 .removeItem();
 
