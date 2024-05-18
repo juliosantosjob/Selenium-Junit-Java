@@ -9,7 +9,7 @@ import saucedemo.automation.e2e.actions.PurchasesActions;
 import saucedemo.automation.e2e.actions.LoginActions;
 import saucedemo.automation.e2e.support.Hooks;
 
-import static saucedemo.automation.e2e.utils.Assertions.assertText;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static saucedemo.automation.e2e.utils.Assertions.textNotDisplayed;
 
 @Tag("regression")
@@ -34,7 +34,7 @@ public class PurchasesTest extends Hooks {
                 .accessCart()
                 .getNameProductInCart();
 
-        assertText(name, product);
+        assertEquals(namr, product);
     }
 
     @Test
