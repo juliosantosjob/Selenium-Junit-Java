@@ -34,7 +34,7 @@ public class PurchasesTest extends Hooks {
                 .accessCart()
                 .getNameProductInCart();
 
-        assertEquals(namr, product);
+        assertEquals(name, product);
     }
 
     @Test
