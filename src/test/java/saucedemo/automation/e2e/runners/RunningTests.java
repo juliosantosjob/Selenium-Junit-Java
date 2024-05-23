@@ -10,6 +10,6 @@ import saucedemo.automation.e2e.tests.LoginTest;
 
 @Suite
 @SelectClasses({ PurchasesTest.class, LoginTest.class })
-@SelectPackages("src/test/java/com.saucedemo.tests")
+@SelectPackages("src/test/java/saucedemo.automation.e2e")
 @IncludeTags("regression")
 public class RunningTests {}

@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 import java.util.logging.Level;
 
 import static java.lang.System.getProperty;
@@ -23,7 +21,7 @@ public class DriverFactory {
 
         switch (browser) {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
+                System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 System.setProperty("webdriver.chrome.silentOutput", "true");
@@ -32,12 +30,10 @@ public class DriverFactory {
                 break;
 
             case "edge":
-                WebDriverManager.chromedriver().setup();
                 driver = new EdgeDriver();
                 break;
 
             case "chrome-headless":
-                WebDriverManager.chromedriver().setup();
                 ChromeOptions headlessChromeOptions = new ChromeOptions();
                 headlessChromeOptions.addArguments("--headless");
                 headlessChromeOptions.addArguments("--remote-allow-origins=*");
@@ -46,7 +42,6 @@ public class DriverFactory {
                 break;
 
             case "edge-headless":
-                WebDriverManager.chromedriver().setup();
                 EdgeOptions headlessEdgeOptions = new EdgeOptions();
                 headlessEdgeOptions.addArguments("headless");
                 headlessEdgeOptions.addArguments("--window-size=1920x1080");

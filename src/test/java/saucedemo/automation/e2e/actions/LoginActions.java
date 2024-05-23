@@ -5,41 +5,33 @@ import org.openqa.selenium.support.PageFactory;
 
 import saucedemo.automation.e2e.pages.LoginPages;
 
+import static org.junit.Assert.assertEquals;
 import static saucedemo.automation.e2e.utils.Assertions.*;
 import static saucedemo.automation.e2e.utils.Commands.*;
 
 public class LoginActions extends LoginPages {
-	private final WebDriver driver;
-
+	
 	public LoginActions(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver = driver;
 	}
 
-	public LoginActions go() {
+	public void openApp() {
 		isVisible(imgHomeSite);
-
-		return new LoginActions(driver);
 	}
 
-	public LoginActions fillCredentials(String userName, String password) {
+	public void fillCreds(String userName, String password) {
 		fill(iptUsrName, userName);
 		fill(iptPassword, password);
 		click(btnSubmit);
-
-		return new LoginActions(driver);
 	}
 
-	public LoginActions beLogged() {
+	public void isLogged() {
 		isVisible(loggedTitle);
 		assertion(loggedTitle, "Products");
-
-		return new LoginActions(driver);
 	}
 
-	public String getError() {
+	public void displaysError(String error) {
 		isVisible(msgError);
-
-		return msgError.getText();
+		assertEquals(msgError.getText(), error);
 	}
 }

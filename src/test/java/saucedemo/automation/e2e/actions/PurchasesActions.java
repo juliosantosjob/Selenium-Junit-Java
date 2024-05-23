@@ -8,36 +8,36 @@ import saucedemo.automation.e2e.pages.PurchasesPages;
 import static saucedemo.automation.e2e.utils.Assertions.*;
 import static saucedemo.automation.e2e.utils.Commands.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static saucedemo.automation.e2e.utils.Assertions.textNotDisplayed;
+
 public class PurchasesActions extends PurchasesPages {
-    private final WebDriver driver;
 
     public PurchasesActions(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver;
     }
 
-    public PurchasesActions addToCart(String nameProduct) {
+    public void addToCart(String nameProduct) {
         clickText(nameProduct);
         contains(cardItem, nameProduct);
         clickText("Add to cart");
-
-        return new PurchasesActions(driver);
     }
 
-    public PurchasesActions accessCart() {
+    public void accessCart() {
         click(btnCart);
         assertion(titleYourCart, "Your Cart");
-
-        return new PurchasesActions(driver);
     }
 
-    public String getNameProductInCart() {
+    public void isDisplayed(String nameProduct) {
         isVisible(fieldProduct);
-
-        return fieldProduct.getText();
+        assertEquals(fieldProduct.getText(), nameProduct);
     }
 
     public void removeItem() {
         clickText("Remove");
+    }
+
+    public void isNotDisplayed(String nameProduct) {
+        textNotDisplayed(nameProduct);
     }
 }

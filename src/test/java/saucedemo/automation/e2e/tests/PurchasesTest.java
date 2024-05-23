@@ -5,48 +5,42 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import saucedemo.automation.e2e.actions.PurchasesActions;
 import saucedemo.automation.e2e.actions.LoginActions;
+import saucedemo.automation.e2e.actions.PurchasesActions;
 import saucedemo.automation.e2e.support.Hooks;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static saucedemo.automation.e2e.utils.Assertions.textNotDisplayed;
 
 @Tag("regression")
 public class PurchasesTest extends Hooks {
+    public static LoginActions login;
+    public static PurchasesActions purchases;
     private final String product = "Sauce Labs Bike Light";
 
     @BeforeEach
-    public void hookBefore() {
+    public void hooks() {
         /* Ação de login para realizar os proximos cenarios */
-        new LoginActions(driver)
-                .go()
-                .fillCredentials("standard_user", "secret_sauce")
-                .beLogged();
+
+        login.openApp();
+        login.fillCreds("standard_user", "secret_sauce");
+        login.isLogged();
     }
 
     @Test
     @Tag("add_product")
     @DisplayName("Adding product to cart")
     public void addingProductToTheCart() {
-        String name = new PurchasesActions(driver)
-                .addToCart(product)
-                .accessCart()
-                .getNameProductInCart();
-
-        assertEquals(name, product);
+        purchases.addToCart(product);
+        purchases.accessCart();
+        purchases.isDisplayed(product);
     }
 
     @Test
     @Tag("rmv_product")
     @DisplayName("Remove product to cart")
     public void removeProductToCart() {
-        new PurchasesActions(driver)
-                .addToCart(product)
-                .accessCart()
-                .removeItem();
-
-        textNotDisplayed(product);
+        purchases.addToCart(product);
+        purchases.accessCart();
+        purchases.removeItem();
+        purchases.isNotDisplayed(product);
     }
 
 }
