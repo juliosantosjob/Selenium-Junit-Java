@@ -20,14 +20,14 @@ public class PurchasesTest extends Hooks {
         /* Ação de login para realizar os proximos cenarios */
 
         login.doLogin("standard_user", "secret_sauce");
+        purchases.addToCart(product);
+        purchases.accessCart();
     }
 
     @Test
     @Tag("add_product")
     @DisplayName("Adding product to cart")
     public void addingProductToTheCart() {
-        purchases.addToCart(product);
-        purchases.accessCart();
         purchases.isDisplayed(product);
     }
 
@@ -35,8 +35,6 @@ public class PurchasesTest extends Hooks {
     @Tag("rmv_product")
     @DisplayName("Remove product to cart")
     public void removeProductToCart() {
-        purchases.addToCart(product);
-        purchases.accessCart();
         purchases.removeItem();
         purchases.isNotDisplayed(product);
     }
