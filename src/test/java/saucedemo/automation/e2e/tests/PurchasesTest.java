@@ -19,9 +19,7 @@ public class PurchasesTest extends Hooks {
     public void hooks() {
         /* Ação de login para realizar os proximos cenarios */
 
-        login.openApp();
-        login.fillCreds("standard_user", "secret_sauce");
-        login.isLogged();
+        login.doLogin("standard_user", "secret_sauce");
     }
 
     @Test
