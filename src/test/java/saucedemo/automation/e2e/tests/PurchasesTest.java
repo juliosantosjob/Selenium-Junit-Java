@@ -17,8 +17,6 @@ public class PurchasesTest extends Hooks {
 
     @BeforeEach
     public void hooks() {
-        /* Ação de login para realizar os proximos cenarios */
-
         login.doLogin("standard_user", "secret_sauce");
         purchases.addToCart(product);
         purchases.accessCart();
