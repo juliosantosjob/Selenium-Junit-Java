@@ -34,4 +34,10 @@ public class LoginActions extends LoginPages {
 		isVisible(msgError);
 		assertEquals(msgError.getText(), error);
 	}
+
+	public void doLogin(String userName, String password) {
+		openApp();
+		fillCreds(userName, password);
+		isLogged();
+	}
 }
